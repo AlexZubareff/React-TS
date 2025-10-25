@@ -9,8 +9,8 @@ export const ViewList = () => {
   const todoList = useSelector((state: RootState) => state.todoList.todos)
   return (
     <div className="container">
-      {todoList.map((todo: IToDo, idx: number) => {
-        return <ListItem todo={todo} key={idx} />
+      {todoList.map((todo: IToDo) => {
+        return <ListItem todo={todo} key={todo.id} />
       })}
     </div>
   )
